@@ -336,6 +336,21 @@ main {
   border-radius: 20px;
 }
 
+.avatar-box img {
+  display: block;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.photo-credit {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-align: center;
+  margin: 0 0 15px;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
