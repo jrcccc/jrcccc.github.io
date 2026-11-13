@@ -120,6 +120,13 @@
             </a>
           </li>
 
+          <li class="social-item">
+            <a href="https://github.com/jrcccc" class="social-link" target="_blank" rel="noopener"
+              aria-label="GitHub profile" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
         </ul>
 
       </div>
@@ -158,6 +165,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Talks</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Animations</button>
           </li>
 
           <li class="navbar-item">
@@ -1419,6 +1430,87 @@
 
 
       <!--
+        - #ANIMATIONS
+      -->
+
+      <article class="animations" data-page="animations">
+
+        <header>
+          <h2 class="h2 article-title">Animations</h2>
+        </header>
+
+        <section class="animation-section">
+
+          <ul class="animation-list">
+
+            <li class="animation-item">
+              <a href="https://zenodo.org/records/15481610" class="animation-link" target="_blank" rel="noopener"
+                data-video="https://zenodo.org/records/15481610/files/velDeflag-4462.mp4">
+
+                <figure class="animation-img">
+                  <img src="./assets/images/animations/deflagration.jpg" alt="Fluid velocity in a deflagration simulation" loading="lazy" width="720" height="720">
+                  <span class="animation-play"><ion-icon name="play" aria-hidden="true"></ion-icon></span>
+                </figure>
+
+                <h4 class="h4 animation-title">Deflagration in a strong first-order phase transition</h4>
+
+              </a>
+            </li>
+
+            <li class="animation-item">
+              <a href="https://zenodo.org/records/14160869" class="animation-link" target="_blank" rel="noopener"
+                data-video="https://zenodo.org/records/14160869/files/2krs1lp5.mp4">
+
+                <figure class="animation-img">
+                  <img src="./assets/images/animations/axion-strings.jpg" alt="Late-time axion string network from a large lattice simulation" loading="lazy" width="720" height="720">
+                  <span class="animation-play"><ion-icon name="play" aria-hidden="true"></ion-icon></span>
+                </figure>
+
+                <h4 class="h4 animation-title">Axion string network in terasite simulations</h4>
+
+              </a>
+            </li>
+
+            <li class="animation-item">
+              <a href="https://zenodo.org/records/10845839" class="animation-link" target="_blank" rel="noopener"
+                data-video="https://zenodo.org/records/10845839/files/supercondicting_Arg.mp4">
+
+                <figure class="animation-img">
+                  <img src="./assets/images/animations/superconducting-strings.jpg" alt="Superconducting strings coloured by the phase of the condensate" loading="lazy" width="720" height="720">
+                  <span class="animation-play"><ion-icon name="play" aria-hidden="true"></ion-icon></span>
+                </figure>
+
+                <h4 class="h4 animation-title">Superconducting string network</h4>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <dialog class="video-modal" data-video-modal aria-labelledby="video-modal-title">
+          <div class="video-modal-inner">
+          <div class="video-modal-header">
+            <h3 class="h4 video-modal-title" id="video-modal-title" data-video-title></h3>
+            <button class="video-modal-close" type="button" aria-label="Close video" data-video-close>
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <video class="video-modal-player" controls playsinline loop preload="none" data-video-player></video>
+
+          <p class="video-modal-note">
+            <a href="#" class="publication-link inline-link" target="_blank" rel="noopener" data-video-source>View on Zenodo</a>
+            <span class="video-modal-error" data-video-error hidden>&mdash; the video could not be played here.</span>
+          </p>
+          </div>
+        </dialog>
+
+      </article>
+
+
+      <!--
         - #CONTACT
       -->
 
@@ -1483,6 +1575,7 @@
   <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="./assets/js/talks.js"></script>
+  <script src="./assets/js/animations.js"></script>
 
   <!--
     - ionicon link
