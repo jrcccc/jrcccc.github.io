@@ -831,7 +831,8 @@ main {
 }
 
 .resume .timeline-item-title,
-.publications .timeline-item-title { text-transform: none; }
+.publications .timeline-item-title,
+.talks .timeline-item-title { text-transform: none; }
 
 .inline-link {
   display: inline;
@@ -1189,6 +1190,35 @@ main {
   border: none;
   filter: grayscale(1);
 }
+
+.talks-map {
+  height: 320px;
+  z-index: 0; /* keep Leaflet's layers below the fixed navbar */
+}
+
+.talks-map #talks-map { height: 100%; }
+
+.talks-map .leaflet-control-attribution a,
+.talks-map .leaflet-control-attribution svg,
+.talks-map .leaflet-control-attribution img,
+.talks-map .leaflet-control-attribution span { display: inline; }
+
+.talks-map .leaflet-control-attribution { font-size: 10px; }
+
+.talks-map .leaflet-tile-pane { filter: grayscale(1); }
+
+.talks-map .leaflet-popup-content {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-7);
+  line-height: 1.5;
+}
+
+.talks-popup-list {
+  margin-top: 4px;
+  padding-left: 14px;
+}
+
+.talks-popup-list li { list-style: disc; }
 
 .contact-form { margin-bottom: 10px; }
 

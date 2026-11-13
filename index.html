@@ -17,6 +17,7 @@
   <!--
     - custom css link
   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--
@@ -153,6 +154,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Talks</button>
           </li>
 
           <li class="navbar-item">
@@ -722,6 +727,698 @@
 
 
       <!--
+        - #TALKS
+      -->
+
+      <article class="talks" data-page="talks">
+
+        <header>
+          <h2 class="h2 article-title">Talks</h2>
+        </header>
+
+        <section class="mapbox talks-map" aria-label="Map of talk locations">
+          <div id="talks-map" data-talks-map></div>
+        </section>
+
+        <script type="application/json" id="talk-locations">
+[
+  {
+    "place": "Oslo, Norway",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "events": [
+      "Fredagskollokvium (Sep. 2026)",
+      "DSTrain kick-off Seminars (Nov. 2025)",
+      "Gravity Matters Seminars (Sep. 2025)",
+      "DSTrain workshop (Mar. 2026)"
+    ]
+  },
+  {
+    "place": "Cambridge, United Kingdom",
+    "lat": 52.2053,
+    "lon": 0.1218,
+    "events": [
+      "Universe Unravelled: Cosmic Strings at 50 (Sep. 2026)",
+      "GR Seminar (Mar. 2022)"
+    ]
+  },
+  {
+    "place": "Bilbao, Spain",
+    "lat": 43.263,
+    "lon": -2.935,
+    "events": [
+      "EHU Quantum Center Seminars, University of the Basque Country (Jun. 2026)",
+      "VIII Cosmological Olentzero Workshop (Dec. 2024)",
+      "Ibericos 2019 (Apr. 2019)"
+    ]
+  },
+  {
+    "place": "Helsinki, Finland",
+    "lat": 60.1699,
+    "lon": 24.9384,
+    "events": [
+      "Cosmology Seminars, Helsinki Institute of Physics (Jan. 2026)",
+      "HIP Seminars (Sep. 2022)",
+      "Second Nordic Cosmology Meeting (Mar. 2025)"
+    ]
+  },
+  {
+    "place": "Stockholm, Sweden",
+    "lat": 59.3293,
+    "lon": 18.0686,
+    "events": [
+      "Numerical Simulations of Early Universe Sources of Gravitational Waves (Aug. 2025)",
+      "Axions in Stockholm (Jun. 2025)"
+    ]
+  },
+  {
+    "place": "Manchester, United Kingdom",
+    "lat": 53.4808,
+    "lon": -2.2426,
+    "events": [
+      "Topological Defects in Cosmology conference (Jun. 2024)"
+    ]
+  },
+  {
+    "place": "Daejeon, South Korea",
+    "lat": 36.3504,
+    "lon": 127.3845,
+    "events": [
+      "Workshop on Topological Defects (Sep. 2023)"
+    ]
+  },
+  {
+    "place": "Paris, France",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "events": [
+      "Superconducting String Workshop (Dec. 2022)"
+    ]
+  },
+  {
+    "place": "Leiden, Netherlands",
+    "lat": 52.1601,
+    "lon": 4.497,
+    "events": [
+      "Cosmic Topological Defects: Dynamics and Multi-Messenger Signatures workshop (Sep. 2018)"
+    ]
+  },
+  {
+    "place": "A Coruña, Spain",
+    "lat": 43.3623,
+    "lon": -8.4115,
+    "events": [
+      "Invisibles 26 (Jul. 2026)"
+    ]
+  },
+  {
+    "place": "Zaragoza, Spain",
+    "lat": 41.6488,
+    "lon": -0.8891,
+    "events": [
+      "Identification of Dark Matter 2026 (Jun. 2026)"
+    ]
+  },
+  {
+    "place": "Granada, Spain",
+    "lat": 37.1773,
+    "lon": -3.5986,
+    "events": [
+      "Ibericos 2026 (Apr. 2026)"
+    ]
+  },
+  {
+    "place": "Coimbra, Portugal",
+    "lat": 40.2033,
+    "lon": -8.4103,
+    "events": [
+      "Ibericos 2025 (Apr. 2025)"
+    ]
+  },
+  {
+    "place": "Porto, Portugal",
+    "lat": 41.1579,
+    "lon": -8.6291,
+    "events": [
+      "LISA 11th Cosmology Working Group Workshop (Jun. 2024)",
+      "IA-ON 2019 (Oct. 2019)"
+    ]
+  },
+  {
+    "place": "Tampere, Finland",
+    "lat": 61.4978,
+    "lon": 23.761,
+    "events": [
+      "Tampere Cosmology Meeting (May 2023)"
+    ]
+  },
+  {
+    "place": "Ponte de Lima, Portugal",
+    "lat": 41.7672,
+    "lon": -8.5838,
+    "events": [
+      "Ibericos 2023 (Apr. 2023)"
+    ]
+  },
+  {
+    "place": "Portsmouth, United Kingdom",
+    "lat": 50.8198,
+    "lon": -1.088,
+    "events": [
+      "Texas Symposium 2019 (Dec. 2019)"
+    ]
+  },
+  {
+    "place": "Prague, Czech Republic",
+    "lat": 50.0755,
+    "lon": 14.4378,
+    "events": [
+      "Gravity@Prague School (Sep. 2018)"
+    ]
+  },
+  {
+    "place": "Salamanca, Spain",
+    "lat": 40.9701,
+    "lon": -5.6635,
+    "events": [
+      "XIII Reunión Científica de la Sociedad Española de Astronomía (SEA) 2018 (Jul. 2018)"
+    ]
+  },
+  {
+    "place": "Lisbon, Portugal",
+    "lat": 38.7223,
+    "lon": -9.1393,
+    "events": [
+      "Ibericos 2018 (Apr. 2018)",
+      "Encontro Nacional de Astronomia e Astrofísica XXVII (Jul. 2017)",
+      "Encontro Nacional de Astronomia e Astrofísica XXIII (Jul. 2013)"
+    ]
+  },
+  {
+    "place": "Braga, Portugal",
+    "lat": 41.5454,
+    "lon": -8.4265,
+    "events": [
+      "Física 2016 (Sep. 2016)"
+    ]
+  },
+  {
+    "place": "Aveiro, Portugal",
+    "lat": 40.6405,
+    "lon": -8.6538,
+    "events": [
+      "Ibericos 2014 (Mar. 2014)"
+    ]
+  }
+]
+        </script>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="mic-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Invited Talks</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gravitational waves from strong first order phase transitions</h4>
+
+              <span>Oct. 2026 &middot; Online</span>
+
+              <p class="timeline-text">Seminar at Seminários do Grupo de Partículas e Cosmologia, Universidade Federal de Minas Gerais</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sound of a Phase Transition: Echoes of the Early Universe</h4>
+
+              <span>Sep. 2026 &middot; Oslo, Norway</span>
+
+              <p class="timeline-text">Colloquium at Fredagskollokvium</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Current-carrying string network simulations</h4>
+
+              <span>Sep. 2026 &middot; Cambridge, United Kingdom</span>
+
+              <p class="timeline-text">Talk at Universe Unravelled: Cosmic Strings at 50</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gravitational waves from strong first order phase transitions</h4>
+
+              <span>Jun. 2026 &middot; Bilbao, Spain</span>
+
+              <p class="timeline-text">Seminar at EHU Quantum Center Seminars, University of the Basque Country</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gravitational waves from strong first order phase transitions</h4>
+
+              <span>Jan. 2026 &middot; Helsinki, Finland</span>
+
+              <p class="timeline-text">Seminar at Cosmology Seminars, Helsinki Institute of Physics</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sound of a Phase Transition</h4>
+
+              <span>Nov. 2025 &middot; Oslo, Norway</span>
+
+              <p class="timeline-text">Talk at DSTrain kick-off Seminars</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Terasite simulations of axion string networks</h4>
+
+              <span>Sep. 2025 &middot; Oslo, Norway</span>
+
+              <p class="timeline-text">Seminar at Gravity Matters Seminars</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Terasite simulations of axion string networks</h4>
+
+              <span>Aug. 2025 &middot; Stockholm, Sweden</span>
+
+              <p class="timeline-text">Talk at Numerical Simulations of Early Universe Sources of Gravitational Waves</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Evolution of current-carrying string networks</h4>
+
+              <span>Jun. 2024 &middot; Manchester, United Kingdom</span>
+
+              <p class="timeline-text">Talk at Topological Defects in Cosmology conference</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Strings in U(1)&times;U(1) simulations</h4>
+
+              <span>Sep. 2023 &middot; Daejeon, South Korea</span>
+
+              <p class="timeline-text">Talk at Workshop on Topological Defects</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On multi-tension string networks</h4>
+
+              <span>Dec. 2022 &middot; Paris, France</span>
+
+              <p class="timeline-text">Seminar at Superconducting String Workshop</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On multi-tension string networks</h4>
+
+              <span>Sep. 2022 &middot; Helsinki, Finland</span>
+
+              <p class="timeline-text">Seminar at HIP Seminars</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On multi-tension string networks</h4>
+
+              <span>Mar. 2022 &middot; Cambridge, United Kingdom</span>
+
+              <p class="timeline-text">Seminar at GR Seminar</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cracks in the sky: Cosmic string evolution with the Compute Unified Device Architecture</h4>
+
+              <span>Sep. 2018 &middot; Leiden, Netherlands</span>
+
+              <p class="timeline-text">Talk at Cosmic Topological Defects: Dynamics and Multi-Messenger Signatures workshop</p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="easel-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Conference Presentations</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The spectrum of axions from a scaling string network</h4>
+
+              <span>Jul. 2026 &middot; A Coruña, Spain</span>
+
+              <p class="timeline-text">Talk at Invisibles 26</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The spectrum of axions from a scaling string network</h4>
+
+              <span>Jul. 2026 &middot; A Coruña, Spain</span>
+
+              <p class="timeline-text">Poster at Invisibles 26</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The spectrum of axions in a scaling string network</h4>
+
+              <span>Jun. 2026 &middot; Zaragoza, Spain</span>
+
+              <p class="timeline-text">Talk at Identification of Dark Matter 2026</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The spectrum of axions in a scaling string network</h4>
+
+              <span>Apr. 2026 &middot; Granada, Spain</span>
+
+              <p class="timeline-text">Talk at Ibericos 2026</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SISYPHEAN: Simulating Early Universe Phase Transitions</h4>
+
+              <span>Mar. 2026 &middot; Oslo, Norway</span>
+
+              <p class="timeline-text">Talk at DSTrain workshop</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The spectrum of axions from a scaling string network</h4>
+
+              <span>Feb. 2026 &middot; Online</span>
+
+              <p class="timeline-text">Talk at Early Universe from Home 2026</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networks of axion strings</h4>
+
+              <span>Jun. 2025 &middot; Stockholm, Sweden</span>
+
+              <p class="timeline-text">Poster at Axions in Stockholm</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networks of axion strings &ndash; Scaling</h4>
+
+              <span>Jun. 2025 &middot; Stockholm, Sweden</span>
+
+              <p class="timeline-text">Talk at Axions in Stockholm</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Axion string evolution in terasite simulations</h4>
+
+              <span>Jun. 2025 &middot; Stockholm, Sweden</span>
+
+              <p class="timeline-text">Talk at Axions in Stockholm</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gravitational waves from compressional and vortical modes in strong first order phase transitions</h4>
+
+              <span>Apr. 2025 &middot; Coimbra, Portugal</span>
+
+              <p class="timeline-text">Talk at Ibericos 2025</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networks of axion strings &ndash; Scaling</h4>
+
+              <span>Mar. 2025 &middot; Helsinki, Finland</span>
+
+              <p class="timeline-text">Talk at Second Nordic Cosmology Meeting</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networks of axion strings</h4>
+
+              <span>Dec. 2024 &middot; Bilbao, Spain</span>
+
+              <p class="timeline-text">Talk at VIII Cosmological Olentzero Workshop</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gravitational waves from compressional and vortical modes in strong first order phase transitions</h4>
+
+              <span>Jun. 2024 &middot; Porto, Portugal</span>
+
+              <p class="timeline-text">Talk at LISA 11th Cosmology Working Group Workshop</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">First-order phase transition simulations</h4>
+
+              <span>May 2023 &middot; Tampere, Finland</span>
+
+              <p class="timeline-text">Talk at Tampere Cosmology Meeting</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Networks of current-carrying strings</h4>
+
+              <span>Apr. 2023 &middot; Ponte de Lima, Portugal</span>
+
+              <p class="timeline-text">Talk at Ibericos 2023</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High resolution calibration of string modelling</h4>
+
+              <span>Aug. 2021 &middot; Online</span>
+
+              <p class="timeline-text">Talk at COSMO21</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High resolution calibration of string modelling</h4>
+
+              <span>Jul. 2021 &middot; Online</span>
+
+              <p class="timeline-text">Talk at Marcel Grossmann 16</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On improving string modelling</h4>
+
+              <span>Mar. &ndash; Apr. 2021 &middot; Online</span>
+
+              <p class="timeline-text">Talk at Ibericos 2021</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Coding the cosmos: A New Generation of Superstring Simulations</h4>
+
+              <span>Mar. 2021 &middot; Online</span>
+
+              <p class="timeline-text">Poster at EuroHPC Summit Week 2021</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Overcooling string simulations</h4>
+
+              <span>Sep. 2020 &middot; Online</span>
+
+              <p class="timeline-text">Poster at Encontro Nacional de Astronomia e Astrofísica XXX</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Calibrating string evolution modelling</h4>
+
+              <span>Dec. 2019 &middot; Portsmouth, United Kingdom</span>
+
+              <p class="timeline-text">Talk at Texas Symposium 2019</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On string evolution and graphical computing</h4>
+
+              <span>Oct. 2019 &middot; Porto, Portugal</span>
+
+              <p class="timeline-text">Talk at IA-ON 2019</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On extending cosmic string analytical modelling with one thousand simulations</h4>
+
+              <span>Sep. 2019 &middot; Online</span>
+
+              <p class="timeline-text">Poster at Encontro Nacional de Astronomia e Astrofísica XXIX</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">On cosmic string evolution and graphical supercomputing</h4>
+
+              <span>Apr. 2019 &middot; Bilbao, Spain</span>
+
+              <p class="timeline-text">Talk at Ibericos 2019</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cracks in the sky: cosmic string evolution with CUDA</h4>
+
+              <span>Sep. 2018 &middot; Prague, Czech Republic</span>
+
+              <p class="timeline-text">Poster at Gravity@Prague School</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Anisotropic Domain Walls</h4>
+
+              <span>Jul. 2018 &middot; Salamanca, Spain</span>
+
+              <p class="timeline-text">Poster at XIII Reunión Científica de la Sociedad Española de Astronomía (SEA) 2018</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">GPGPU Anisotropic Domain Walls</h4>
+
+              <span>Apr. 2018 &middot; Lisbon, Portugal</span>
+
+              <p class="timeline-text">Talk at Ibericos 2018</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">GPGPU Domain Wall network simulations</h4>
+
+              <span>Jul. 2017 &middot; Lisbon, Portugal</span>
+
+              <p class="timeline-text">Talk at Encontro Nacional de Astronomia e Astrofísica XXVII</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Search for new vector-like quarks in hadronic topologies</h4>
+
+              <span>Sep. 2016 &middot; Braga, Portugal</span>
+
+              <p class="timeline-text">Poster at Física 2016</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Effects of biases on domain wall network evolution</h4>
+
+              <span>Mar. 2014 &middot; Aveiro, Portugal</span>
+
+              <p class="timeline-text">Talk at Ibericos 2014</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Different views on cosmic defect evolution</h4>
+
+              <span>Jul. 2013 &middot; Lisbon, Portugal</span>
+
+              <p class="timeline-text">Talk at Encontro Nacional de Astronomia e Astrofísica XXIII</p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+      <!--
         - #CONTACT
       -->
 
@@ -784,6 +1481,8 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="./assets/js/talks.js"></script>
 
   <!--
     - ionicon link
