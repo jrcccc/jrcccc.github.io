@@ -815,6 +815,54 @@ main {
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
+.citation-stats { margin-bottom: 30px; }
+
+.stat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.stat-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.stat-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.stat-label {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  color: var(--orange-yellow-crayola);
+  font-size: 32px;
+  font-weight: var(--fw-600);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-note {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+}
+
+.stat-note span { display: inline; }
+
 .publication-link { color: inherit; }
 
 .publication-link:hover { color: var(--orange-yellow-crayola); }
