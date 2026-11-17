@@ -43,13 +43,20 @@
     if (player.getAttribute("src")) error.hidden = false;
   });
 
-  closeBtn.addEventListener("click", function () { modal.close(); });
+  const close = function () {
+    stop();
+    modal.close();
+  };
+
+  closeBtn.addEventListener("click", close);
 
   // Close when clicking the dimmed backdrop around the player.
   modal.addEventListener("click", function (event) {
-    if (event.target === modal) modal.close();
+    if (event.target === modal) close();
   });
 
-  // Fires for the close button, backdrop click and the Escape key.
+  // Escape key: "cancel" fires straight away; "close" is a safety net for
+  // any other way the dialog gets closed. stop() is safe to call twice.
+  modal.addEventListener("cancel", stop);
   modal.addEventListener("close", stop);
 })();
